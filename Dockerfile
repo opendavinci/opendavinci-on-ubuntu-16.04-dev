@@ -1,4 +1,4 @@
-# Dockerfile to create an image for building and running OpenDaVINCI.
+# Dockerfile to create an image for building and running OpenDaVINCI-based apps.
 # Copyright (C) 2017 Christian Berger
 #
 # This program is free software; you can redistribute it and/or
@@ -15,9 +15,9 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #
-# Date: 2017-03-21
+# Date: 2017-03-22
 
-FROM ubuntu:16.04
+FROM seresearch/opendavinci-on-ubuntu-16.04:latest
 MAINTAINER Christian Berger "christian.berger@gu.se"
 
 # Set the env variable DEBIAN_FRONTEND to noninteractive
@@ -27,33 +27,28 @@ RUN apt-get update -y && \
     apt-get upgrade -y && \
     apt-get dist-upgrade -y && \
     apt-get install -y --no-install-recommends \
-    ant \
+    rpm \
     build-essential \
+    python2.7 \
+    ant \
+    ccache \
     cmake \
-    default-jre \
     default-jdk \
-    freeglut3 \
+    default-jre \
+    ffmpeg \
     freeglut3-dev \
     git \
+    libfuse-dev \
     libboost-dev \
+    libncurses-dev \
     libopencv-dev \
     libopencv-core-dev \
     libopencv-highgui-dev \
     libopencv-imgproc-dev \
-    libpopt-dev \
     libqt4-dev \
     libqt4-opengl-dev \
     libqwt5-qt4-dev \
-    libqwt5-qt4 \
-    qt4-dev-tools \
-    rpm \
-    psmisc \
-    wget \
-    ffmpeg \
-    ccache \
-    libfuse-dev \
-    gdbserver \
-    libncurses-dev && \
+    qt4-dev-tools && \
     apt-get clean && \
     apt-get autoremove
 
