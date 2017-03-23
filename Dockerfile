@@ -51,5 +51,6 @@ RUN apt-get update -y && \
     libqwt5-qt4-dev \
     qt4-dev-tools && \
     apt-get clean && \
-    apt-get autoremove
+    apt-get autoremove && \
+    ln -sf /usr/bin/ld.gold /usr/bin/ld
 
