@@ -32,7 +32,6 @@ RUN apt-get update -y && \
     python2.7 \
     ant \
     ccache \
-    binutils-gold \
     cmake \
     default-jdk \
     default-jre \
@@ -51,6 +50,5 @@ RUN apt-get update -y && \
     libqwt5-qt4-dev \
     qt4-dev-tools && \
     apt-get clean && \
-    apt-get autoremove && \
-    ln -sf /usr/bin/ld.gold /usr/bin/ld
+    apt-get autoremove
 
