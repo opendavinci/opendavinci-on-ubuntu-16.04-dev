@@ -17,7 +17,7 @@
 #
 # Date: 2017-03-22
 
-FROM seresearch/opendavinci-on-ubuntu-16.04:latest
+FROM seresearch/ubuntu-16.04:latest
 MAINTAINER Christian Berger "christian.berger@gu.se"
 
 # Set the env variable DEBIAN_FRONTEND to noninteractive
