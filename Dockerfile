@@ -32,6 +32,7 @@ RUN apt-get update -y && \
     python2.7 \
     ant \
     ccache \
+    binutils-gold \
     cmake \
     default-jdk \
     default-jre \
